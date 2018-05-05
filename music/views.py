@@ -6,7 +6,7 @@ import django
 
 def index(request):
     all_albums = Album.objects.all()
-    template = loader.get_template('/templates/music/index.html')
+    template = loader.get_template('sindex.html')
     context = {
         'all_albums': all_albums,
     }
