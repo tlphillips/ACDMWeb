@@ -11,7 +11,7 @@ def index(request):
     return render(request, 'music/index.html', context)
 
 
-def detail(requst, album_id):
+def detail(request, album_id):
     try:
         album = Album.objects.get(pk=album_id)
     except Album.DoesNotExist:
