@@ -6,9 +6,7 @@ from django.http import Http404
 
 def index(request):
     all_albums = Album.objects.all()
-    context = {'all_albums': all_albums}
-
-    return render(request, 'music/index.html', context)
+    return render(request, 'music/index.html', {'all_albums': all_albums})
 
 
 def detail(request, album_id):
